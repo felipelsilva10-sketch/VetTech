@@ -4,7 +4,7 @@ using VetTechApi.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Adiciona o banco de dados
-builder.Services.AddDbContext<DbContext>(opt =>
+builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlServer(
         builder.Configuration.GetConnectionString("defaultConnection")
     ));
